@@ -73,12 +73,14 @@ nav a.active {
     padding-bottom: 10px; 
 }
 
-/* 4. PUBLICATIONS STYLES (Tight Format) */
+/* 4. PUBLICATIONS PAGE (Fixed Desktop Spacing) */
 .pub-header {
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
-    margin-bottom: 40px;
+    margin-bottom: 50px; /* Space after Google Scholar link */
+    border-bottom: 2px solid #edf2f7; 
+    padding-bottom: 15px;
 }
 
 .scholar-btn {
@@ -100,7 +102,7 @@ nav a.active {
 .publications-list {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 40px; /* Vertical space between each publication entry */
 }
 
 .pub-entry-tight {
@@ -110,14 +112,15 @@ nav a.active {
 
 .pub-title-grey {
     color: var(--primary) !important;
-    font-weight: 800; /* Extra bold for visibility */
+    font-weight: 800; 
     font-size: 1.1rem;
     line-height: 1.25;
     margin: 0;
+    padding: 0;
 }
 
 .pub-citation {
-    margin-top: 2px; /* Fixes gap between title and authors */
+    margin-top: 4px; /* Title and Authors locked together */
     font-size: 0.95rem;
     line-height: 1.5;
     color: var(--text);
@@ -129,7 +132,7 @@ nav a.active {
     font-weight: 600;
     font-size: 0.82rem;
     display: inline-block;
-    margin-top: 4px;
+    margin-top: 6px;
     text-transform: uppercase;
 }
 
@@ -206,5 +209,6 @@ footer {
 @media (max-width: 800px) {
     .nav-flex { flex-direction: column; gap: 15px; }
     .pi-card { flex-direction: column; align-items: center; text-align: center; }
-    .pub-header { flex-direction: column; align-items: flex-start; gap: 15px; }
+    .pub-header { flex-direction: column; align-items: flex-start; gap: 20px; margin-bottom: 30px; }
+    .publications-list { gap: 30px; }
 }
