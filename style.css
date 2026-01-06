@@ -38,7 +38,7 @@ body {
 
 .logo, a.logo, a.logo:hover, a.logo:visited { 
     font-weight: 800; 
-    font-size: 1.7rem; 
+    font-size: 1.4rem; 
     color: var(--primary) !important; 
     text-decoration: none !important; 
 }
