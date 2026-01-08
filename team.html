@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,9 +49,10 @@
         <h3 class="role-title">Lab Members</h3>
 
         <div class="team-grid">
-            <div class="team-card">
+            <div class="team-card alternate-hover">
                 <div class="photo-container">
-                    <img src="JennyAlaska_Headshot_compress.jpeg" alt="Jenny Alaska">
+                    <img src="JennyAlaska_Headshot_compress.jpeg" alt="Jenny Alaska" class="main-photo">
+                    <img src="JennyAlaska_Peru.JPG" alt="Jenny Alaska Fun" class="hover-1">
                 </div>
                 <h4 class="member-name">Jenny Alaska</h4>
                 <p class="member-role">HRP Fellow</p>
@@ -63,10 +63,10 @@
                 <div class="photo-container">
                     <img src="anthonyzuo_headshot.jpg" alt="Anthony Zuo" class="main-photo">
                     <img src="Zuo_PosterTube.jpg" alt="Option 1" class="hover-1">
-                    </div>
+                </div>
                 <h4 class="member-name">Anthony Zuo</h4>
                 <p class="member-role">PhD Student</p>
-                <p class="member-desc">Anthony is a UConn Molecular & Cell Biology + Physiology & Neurobiology major and comes to us from the San Francisco Bay Area!  Anthony has a strong interest in rare diseases and works on projects related to osteogenesis imperfecta and characterizing skeletal growth.  Anthony is also an RA on campus, is working on his Michelin star, and is a hooper.  The lab also let him win at minigolf and bowling. </p>
+                <p class="member-desc">Anthony is a UConn Molecular & Cell Biology + Physiology & Neurobiology major and comes to us from the San Francisco Bay Area! Anthony has a strong interest in rare diseases and works on projects related to osteogenesis imperfecta and characterizing skeletal growth. Anthony is also an RA on campus, is working on his Michelin star, and is a hooper. The lab also let him win at minigolf and bowling. </p>
             </div>
         </div>
     </main>
@@ -78,32 +78,30 @@
     </footer>
 
     <script>
-        let showFirstPhoto = true;
-
         document.querySelectorAll('.alternate-hover').forEach(card => {
+            // Each card tracks its own toggle state
+            let showAlt = true; 
+
             card.addEventListener('mouseenter', () => {
                 const main = card.querySelector('.main-photo');
                 const alt = card.querySelector('.hover-1');
 
-                if (alt) {
-                    if (showFirstPhoto) {
-                        // Switch to Alt Photo
+                if (alt && main) {
+                    if (showAlt) {
                         alt.style.opacity = "1";
                         main.style.opacity = "0";
                     } else {
-                        // Stay on Main Photo (Effectively showing the headshot)
                         alt.style.opacity = "0";
                         main.style.opacity = "1";
                     }
-                    // Flip the switch for next time
-                    showFirstPhoto = !showFirstPhoto;
+                    showAlt = !showAlt;
                 }
             });
 
             card.addEventListener('mouseleave', () => {
                 const main = card.querySelector('.main-photo');
                 const alt = card.querySelector('.hover-1');
-                if (alt) {
+                if (alt && main) {
                     alt.style.opacity = "0";
                     main.style.opacity = "1";
                 }
