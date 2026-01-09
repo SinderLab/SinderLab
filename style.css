@@ -160,3 +160,56 @@ footer { padding: 60px 0; border-top: 1px solid var(--border); text-align: cente
 .pub-citation strong {
     color: var(--primary); /* Makes your name or key authors pop */
 }
+
+
+/* PUBLICATIONS SPECIFIC STYLES */
+
+/* 1. Header spacing (Moving down the title) */
+.pub-header {
+    margin-top: 52px; /* Moves title down approx 12pt font + lab standard spacing */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 15px;
+    margin-bottom: 40px;
+}
+
+.scholar-link {
+    text-decoration: none;
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* 2. Paper Titles: Bold and Grey */
+.pub-title-bold-grey {
+    font-weight: 800;
+    color: #718096; /* Professional Slate Grey */
+    font-size: 1.1rem;
+    line-height: 1.4;
+    margin-bottom: 6px;
+}
+
+/* 3. 12pt Spacing between listings */
+.pub-item {
+    margin-bottom: 12pt; /* Exact 12pt font height spacing */
+    padding-bottom: 12pt;
+}
+
+.pub-citation {
+    font-size: 0.95rem;
+    color: var(--text);
+    line-height: 1.5;
+}
+
+.pm-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 5px;
+}
+
+.pm-link:hover {
+    text-decoration: underline;
+}
