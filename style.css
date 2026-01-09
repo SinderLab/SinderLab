@@ -110,8 +110,14 @@ nav a.active { color: var(--accent) !important; border-bottom: 2px solid var(--a
 @keyframes zoomIn { from {transform: scale(0.8); opacity: 0;} to {transform: scale(1); opacity: 1;} }
 
 /* 6. PUBLICATIONS PAGE */
+/* Standardize the top distance for all pages */
+.page-content {
+    padding-top: 40px; /* Adjust this number to your liking */
+}
+
+/* Remove the specific extra margin from the Pub Header so it matches the others */
 .pub-header {
-    margin-top: 60px; /* Moves title down approx 12pt + standard spacing */
+    margin-top: 0; 
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
