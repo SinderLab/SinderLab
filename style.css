@@ -134,7 +134,7 @@ nav a.active { color: var(--accent) !important; border-bottom: 2px solid var(--a
     height: 100%; 
     
     /* This color makes the background visible but darkened */
-    background-color: rgba(0, 0, 0, 0.6); 
+    background-color: rgba(0, 0, 0, 0.2); 
     
     /* Adds a nice blur effect to the background webpage */
     backdrop-filter: blur(5px); 
