@@ -119,3 +119,44 @@ footer { padding: 60px 0; border-top: 1px solid var(--border); text-align: cente
     .pi-card { flex-direction: column; align-items: center; text-align: center; }
     .news-item { flex-direction: column; }
 }
+
+/* 7. PUBLICATIONS PAGE FIXES */
+.publications-list { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 50px;           /* Significant space between each paper */
+    margin-top: 40px; 
+}
+
+.pub-item {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f0f4f8; /* Subtle line between papers */
+}
+
+.pub-item:last-child {
+    border-bottom: none;
+}
+
+.pub-title-grey { 
+    color: var(--primary); 
+    font-weight: 800; 
+    font-size: 1.15rem; 
+    line-height: 1.4; 
+    margin-bottom: 8px; /* Space between title and authors */
+    display: block;
+    text-decoration: none;
+}
+
+.pub-title-grey:hover {
+    color: var(--accent);
+}
+
+.pub-citation { 
+    font-size: 0.95rem; 
+    color: var(--text); 
+    line-height: 1.5;
+}
+
+.pub-citation strong {
+    color: var(--primary); /* Makes your name or key authors pop */
+}
