@@ -123,15 +123,41 @@ nav a.active { color: var(--accent) !important; border-bottom: 2px solid var(--a
     font-weight: 700;
 }
 
-/* 5. LIGHTBOX MODAL */
+/* 5. LIGHTBOX MODAL - UPDATED */
 .modal {
-    display: none; position: fixed; z-index: 2000; left: 0; top: 0;
-    width: 100%; height: 100%; background-color: rgba(0,0,0,0.9);
-    justify-content: center; align-items: center; cursor: zoom-out;
+    display: none; 
+    position: fixed; 
+    z-index: 2000; 
+    left: 0; 
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    
+    /* This color makes the background visible but darkened */
+    background-color: rgba(0, 0, 0, 0.6); 
+    
+    /* Adds a nice blur effect to the background webpage */
+    backdrop-filter: blur(5px); 
+    
+    justify-content: center; 
+    align-items: center; 
+    cursor: zoom-out;
 }
-.modal-content { max-width: 85%; max-height: 85%; border-radius: 8px; animation: zoomIn 0.3s ease; }
 
-@keyframes zoomIn { from {transform: scale(0.8); opacity: 0;} to {transform: scale(1); opacity: 1;} }
+.modal-content { 
+    /* Limits image to roughly 2/3 of the screen */
+    max-width: 65%; 
+    max-height: 65%; 
+    
+    border-radius: 8px; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    animation: zoomIn 0.3s ease; 
+}
+
+@keyframes zoomIn { 
+    from {transform: scale(0.8); opacity: 0;} 
+    to {transform: scale(1); opacity: 1;} 
+}
 
 /* 6. PUBLICATIONS PAGE */
 .pub-header {
