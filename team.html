@@ -25,20 +25,20 @@
     </header>
 
     <main class="container page-content">
-        <h2 class="section-title" style="margin-top: 40px;">Our Team</h2>
-        
+        <h2 class="section-title">Our Team</h2>
+        <br>
         <section class="pi-section">
             <div class="pi-card alternate-hover">
                 <div class="photo-container pi-photo-container">
                     <img src="headshot_sinder.jpg" alt="Dr. Benjamin Sinder" class="pi-img main-photo">
                     <img src="headshot_sinder_rectangle.png" alt="Dr. Benjamin Sinder Alt" class="pi-img hover-1">
                 </div>
-        
-                <div class="member-info">
+                
+                <div class="member-info" style="margin-top: -16px;">
                     <h3 class="member-name">Benjamin Sinder, PhD</h3>
                     <p class="member-title">Principal Investigator | Assistant Professor of Orthopaedics</p>
                     <p class="member-bio">
-                 Ben is an assistant professor of orthopedics at the University of Connecticut Health Center, has a joint appointment in Biomedical Engineering at UConn, and also directs the microCT imaging core.  Ben majored in Biomedical Engineering at Case Western Reserve University where he was captain of the tennis team (go spartans) and played in the orchestra.  After that, Ben received his PhD from the University of Michigan and did 2 postdocs in skeletal biology.  Outside of the lab Ben started playing tennis again and races sailboats.
+                        Ben is an assistant professor of orthopedics at the University of Connecticut Health Center, has a joint appointment in Biomedical Engineering at UConn, and also directs the microCT imaging core. Ben majored in Biomedical Engineering at Case Western Reserve University where he was captain of the tennis team (go spartans) and played in the orchestra. After that, Ben received his PhD from the University of Michigan and did 2 postdocs in skeletal biology. Outside of the lab Ben started playing tennis again and races sailboats.
                     </p>
                 </div>
             </div>
@@ -77,13 +77,10 @@
 
     <script>
         document.querySelectorAll('.alternate-hover').forEach(card => {
-            // Each card tracks its own toggle state
             let showAlt = true; 
-
             card.addEventListener('mouseenter', () => {
                 const main = card.querySelector('.main-photo');
                 const alt = card.querySelector('.hover-1');
-
                 if (alt && main) {
                     if (showAlt) {
                         alt.style.opacity = "1";
@@ -95,7 +92,6 @@
                     showAlt = !showAlt;
                 }
             });
-
             card.addEventListener('mouseleave', () => {
                 const main = card.querySelector('.main-photo');
                 const alt = card.querySelector('.hover-1');
